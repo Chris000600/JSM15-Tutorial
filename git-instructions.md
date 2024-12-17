@@ -46,6 +46,7 @@ To switch branches:
 
 ```
 git switch branch-name
+git pull origin branch-name
 ```
 
 To merge branch to main:
