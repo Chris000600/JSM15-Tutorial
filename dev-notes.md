@@ -17,3 +17,5 @@
 5. Added utilities to `globals.css` file for reusable classes. Added [ShadCN CLI](https://ui.shadcn.com/docs/cli) for reusable components. Re-copy `tailwind.config.ts` and `globals.css` files because ShadCN may have altered them.
 
 6. Added Hero section to home page, implement search form component with custom URL modifying capabilities.
+
+7. Added Startup section and startup cards to home page. Added custom date utility function to `utils.ts`. Added image permissions config to `next.config.ts`.
