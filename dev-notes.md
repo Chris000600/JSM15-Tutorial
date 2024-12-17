@@ -1,3 +1,27 @@
+#### Tech Stack
+
+- NEXT 15
+- React 19
+- Tailwind CSS
+- ShadCN - Component Library
+- NextAuth - Github Integration
+- Sanity - Content Operation System
+
+#### Project Initialization
+
+```
+npx create-next-app@latest ./
+Typescript - Yes
+ESLint - Yes
+TailwindCSS - Yes
+`src/` directory - No
+App Router - Yes
+Turbopack - Yes
+custom import alias - No
+```
+
+#### Update Log
+
 1. Added the following to `package.json` to ensure consistent dependency version.
 
 ```
@@ -19,3 +43,13 @@
 6. Added Hero section to home page, implement search form component with custom URL modifying capabilities.
 
 7. Added Startup section and startup cards to home page. Added custom date utility function to `utils.ts`. Added image permissions config to `next.config.ts`.
+
+8. Installed and setup [Sanity](https://www.sanity.io) and sanity canary
+
+```
+npm create sanity@latest -- --project <id> --dataset production --template clean --typescript --output-path studio-jsm-15-tutorial
+
+npm install next-sanity@canary
+```
+
+9. Temporarily disable turbopack in `package.json` file by setting `"dev": "next dev"`. Copy sanity's env variable to the project's env file then go to `localhost:3000/studio`
