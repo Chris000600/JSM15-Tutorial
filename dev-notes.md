@@ -77,3 +77,7 @@ npm install next-sanity@canary
 ```
 
 14. Sanity live fetching update. Make sure `useCdn` is set to `false` in `client.ts`. Install `npm i server-only` and add it to `live.ts` to ensure server side execution. Add new env variable `NEXT_PUBLIC_SANITY_API_VERSION="vX"` as the live feature is currently only available in experimental version. Change the fetch call in `page.tsx` to utilize the live call `const { data: posts } = await sanityFetch({ query: STARTUP_QUERY });` and add the `<SanityLive />` component
+
+15. Sanity search implementation using search params
+
+16.
