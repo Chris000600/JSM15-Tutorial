@@ -56,4 +56,22 @@ npm install next-sanity@canary
 
 10. Created 2 Sanity Schemas (`author.ts`, `startup.ts`), added markdown plugin by installing `npm install sanity-plugin-markdown` and adding `markdownSchema()` to the `sanity.config.ts` file. Also import `import 'easymde/dist/easymde.min.css';` into main layout file for studio css.
 
-11.
+11. Use Sanity's query language, GROQ in the studio's vision tab. Copy the query into `queries.ts`. Call query on main `page.tsx` using fetch. Automate type creation using sanity by running `npx sanity@latest schema extract --path=./sanity/extract.json`
+
+12. Create a `sanity-typegen.json` file which contains
+
+```
+{
+  "path": "./src/**/*.{ts,tsx,js,jsx}",
+  "schema": "./sanity/extract.json",
+  "generates": "./sanity/types.ts"
+}
+```
+
+13. run `npx sanity@latest typegen generate` to generate `types.ts` automatically. Create type `StartupTypeCard` in `StartupCard.tsx`. Edit `package.json` with the following to run `npm run typegen` to automatically create new types.
+
+```
+"predev": "npm run typegen",
+"prebuild": "npm run typegen",
+"typegen": "sanity schema extract --path=./sanity/extract.json && sanity typegen generate"
+```
