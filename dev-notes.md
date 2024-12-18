@@ -80,4 +80,32 @@ npm install next-sanity@canary
 
 15. Sanity search implementation using search params
 
-16.
+16. Implementing Partial Pre-Rendering on startup detail page, add to `next.config.ts`
+
+```
+  experimental: {
+    ppr: 'incremental'
+  },
+  devIndicators: {
+    appIsrStatus: true,
+    buildActivity: true,
+    buildActivityPosition: 'bottom-right'
+  }
+```
+
+17. Update to latest canary version `npm install next@canary` and edit `package.js` to
+
+```
+  "overrides": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+```
+
+18. Install markdown editor and ShadCN's `Skeleton` component
+
+```
+npm install markdown-it
+npm i --save-dev @types/markdown-it
+npx shadcn@latest add skeleton
+```
