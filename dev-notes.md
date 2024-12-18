@@ -53,3 +53,7 @@ npm install next-sanity@canary
 ```
 
 9. Temporarily disable turbopack in `package.json` file by setting `"dev": "next dev"`. Copy sanity's env variable to the project's env file then go to `localhost:3000/studio`
+
+10. Created 2 Sanity Schemas (`author.ts`, `startup.ts`), added markdown plugin by installing `npm install sanity-plugin-markdown` and adding `markdownSchema()` to the `sanity.config.ts` file. Also import `import 'easymde/dist/easymde.min.css';` into main layout file for studio css.
+
+11.
