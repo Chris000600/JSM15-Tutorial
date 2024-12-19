@@ -111,3 +111,5 @@ npx shadcn@latest add skeleton
 ```
 
 19. Create a token API on sanity's dashboard for editor access to create and update data. Added Sanity's write functionality to incrementally update views.
+
+20. Author authentication flow using more queries
