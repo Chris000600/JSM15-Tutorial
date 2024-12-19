@@ -113,3 +113,12 @@ npx shadcn@latest add skeleton
 19. Create a token API on sanity's dashboard for editor access to create and update data. Added Sanity's write functionality to incrementally update views.
 
 20. Author authentication flow using more queries
+
+21. Install some ShadCN components for startup create form
+
+```
+npx shadcn@latest add input textarea toast
+npm i @uiw/react-md-editor
+```
+
+22. Create startup form using `useActionState`, create validations with `zod` on `validation.ts`
