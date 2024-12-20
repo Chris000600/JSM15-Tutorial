@@ -122,3 +122,21 @@ npm i @uiw/react-md-editor
 ```
 
 22. Create startup form using `useActionState`, create validations with `zod` on `validation.ts`
+
+23. Create startup form submit functionality on `actions.ts`. Install slugify `npm install slugify`. Created a new util on `utils.ts`
+
+24. Install [Sentry](https://christopher-william.sentry.io/onboarding/welcome/)
+
+```
+npx @sentry/wizard@latest -i nextjs --saas --org christopher-william --project JSM-NEXT-15
+```
+
+25. Ensure sentry uses the same version of nextjs as our project by editing the `package.json` to
+
+```
+  "overrides": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "^15.1.1-canary.14"
+  },
+```
